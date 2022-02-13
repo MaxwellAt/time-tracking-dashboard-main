@@ -1,0 +1,139 @@
+$Blue: hsl(246, 80%, 60%);
+$Lightred_work: hsl(15, 100%, 70%);
+$Softblue_play: hsl(195, 74%, 62%);
+$Lightred_study: hsl(348, 100%, 68%);
+$Limegreen_exercise: hsl(145, 58%, 55%);
+$Violet_social: hsl(264, 64%, 52%);
+$Softorange_self_care: hsl(43, 84%, 65%);
+
+$Verydarkblue: hsl(226, 43%, 10%);
+$Darkblue: hsl(235, 46%, 20%);
+$Desaturatedblue: hsl(235, 45%, 61%);
+$PaleBlue: hsl(236, 100%, 87%);
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+    background-color: $Verydarkblue !important;
+}
+main{
+    width: 70%;
+    color: $PaleBlue;
+}
+.perfil{
+    width: 9vh;
+    border: white solid 0.4vh;
+    border-radius: 10vh;
+    margin: 2vh 0vh;
+    background-color: white;
+}
+.paicard{
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card{
+    border-radius: 10px !important;
+    background-color: $Darkblue !important;
+    padding: 4vh !important;
+    border: transparent !important;
+}
+.imagens{
+    width: 100%;
+    height: 100%;
+    padding-left: 70%;
+    height: 10vh;
+    margin-bottom: -5vh;
+}
+.divs{
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300 !important;
+    font-size: 3em !important;
+}
+.escopo{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.escopo>img{
+    width: 6vh;
+    display: inline-block;
+    height: 2vh;
+}
+.dia , .mes{
+    display:none;
+    flex-direction: column;
+}
+.semana{
+    display: flex;
+    flex-direction: column;
+}
+.chck{
+    background-color: transparent;
+    color: $PaleBlue;
+    border: transparent;
+    padding: 0;
+}
+.escopo>p{
+    font-size: 18px;
+    font-family: 'Rubik' , sans-serif;
+    font-weight: 500;
+}
+
+/*efeitos (entre muitas áspas kkkk)*/
+
+.chck:focus-within , .chck:focus , .chck:focus-visible{
+    color: white;
+}
+
+/*design de celular*/
+@media (max-width:900px) {
+    main{
+        flex-direction: column;
+        width: 90% !important;
+    }
+    #caixaum{
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    .semana{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+    #segundocard{
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+    .dia>p , .semana>p , .mes>p{
+        line-height: 5vh;
+        overflow: hidden;
+        margin-bottom: 0;
+        font-size: 1.5vh;
+    }
+    .card{
+        font-size: 1.5vh;
+    }
+    .escopo>p{
+        font-size: 1.5vh;
+    }
+    .imagens{
+        padding-left: 75%;
+    }
+    .dia , .mes{
+        justify-content: space-between;
+        flex-direction: row !important;
+    }
+    h2{
+        margin: 0!important;
+        font-size: 3vh !important;
+        line-height: 1 !important;
+    }
+}
